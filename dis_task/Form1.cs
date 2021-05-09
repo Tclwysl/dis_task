@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SQLite;
+using System.Data.SqlClient;
+
 namespace dis_task
 {
     public partial class index : Form
@@ -23,16 +24,21 @@ namespace dis_task
 
         private void index_Load(object sender, EventArgs e)
         {
-            
+            this.label1.Text = DateTime.Now.ToLongDateString().ToString();
+            this.label2.Text= SQLiteHelper.Week();
 
-            string sql = "INSERT INTO dis_team VALUES (31,2,3,4);";
-            SQLiteHelper.ExecuteNonQuery(sql);
-            string sql2 = "select * from dis_team";
-            string[] haha = SQLiteHelper.SqlRow(sql2);
-            this.textBox1.Text = haha[3];
+            String week = SQLiteHelper.Week();
+
+
+            //string sql = "INSERT INTO dis_team VALUES (31,2,3,4);";
+            //SQLiteHelper.ExecuteNonQuery(sql);
+            //查询当日可工作员工
+            string sql = "select * from dis_team where (user_work like'%"+week+"%') or (user_work = '每天')";
+            //string[] haha = SQLiteHelper.SqlRow(sql);
+            //this.textBox1.Text = haha[3];
 
             this.dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = SQLiteHelper.SqlTable(sql2);
+            dataGridView1.DataSource = SQLiteHelper.SqlTable(sql);
 
             dataGridView1.Columns[0].HeaderCell.Value = "人员编号";
             dataGridView1.Columns[1].HeaderCell.Value = "人员姓名";
@@ -66,6 +72,23 @@ namespace dis_task
 
         }
 
-       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void add_user_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            user userForm = new user();
+            //userForm.Show();
+            userForm.ShowDialog();
+            this.Dispose();//释放所有资源
+        }
     }
 }
