@@ -18,3 +18,6 @@ E:\C disc\Gt\业务分配excl\dis_task\dis_task\bin\Debug\EntityFramework.xml
 E:\C disc\Gt\业务分配excl\dis_task\dis_task\bin\Debug\EntityFramework.SqlServer.xml
 E:\C disc\Gt\业务分配excl\dis_task\dis_task\bin\Debug\System.Data.SQLite.xml
 E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.user.resources
+E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis_work.resources
+E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis_disres.resources
+E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis_dishis.resources
