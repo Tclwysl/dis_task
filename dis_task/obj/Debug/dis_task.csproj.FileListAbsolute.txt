@@ -22,3 +22,5 @@ E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis_work.reso
 E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis_disres.resources
 E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis_dishis.resources
 E:\C disc\Gt\业务分配excl\dis_task\dis_task\obj\Debug\dis_task.dis.resources
+E:\C disc\Gt\业务分配excl\dis_task\dis_task\bin\Debug\SunnyUI.dll
+E:\C disc\Gt\业务分配excl\dis_task\dis_task\bin\Debug\SunnyUI.Common.dll
